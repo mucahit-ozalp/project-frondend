@@ -1,5 +1,5 @@
 export class Departmant {
-    id: string;
+    d_id: string;
     departmant: string;
     component: string;
     constructor(component,departmant){
