@@ -1,0 +1,36 @@
+<p>defect oluşturma sayfası</p>
+<div class="dropdown">
+  <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <button class="dropdown-item"  type="button">Kenan</button>
+    <button class="dropdown-item" type="button">Siebel</button>
+    <button class="dropdown-item" type="button">Tibco</button>
+  </div>
+</div>
+
+<div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item" type="button">Tester</button>
+          <button class="dropdown-item" type="button">Developer</button>
+          <button class="dropdown-item" type="button">Operation</button>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-group">
+          <label  for="componentt">departmant</label>
+        </div>
+        <select d_id="departmant" component="departmant" departmant='departmant'  [(ngModel)]="departmant" class="form-control" >
+          <option *ngFor="let dept of departmant" >
+            
+            {{dept.component}} 
+            {{dept.departmant}}
+            </option>
+          
+        </select>
+      </div>
+      

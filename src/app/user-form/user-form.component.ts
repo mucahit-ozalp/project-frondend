@@ -35,7 +35,7 @@ export class UserFormComponent  {
       
 
       console.log(this.user);
-      this.hatali_sayisi=this.user.hatali_giris;
+     
     
       if(this.kullanici_adi == this.user.kullanici_adi ){
         sessionStorage.setItem('kullanici_adi', this.user.kullanici_adi)
@@ -52,12 +52,16 @@ export class UserFormComponent  {
 
        }else {
          this.deger=false;
-        
+         this.hatali_sayisi=this.user.hatali_giris;        
          this.hatali_sayisi++;
          this.hata= new Hata(this.hatali_sayisi,this.kullanici_adi)
          this.hataService.update(this.hata).subscribe(data =>{this.hata=data;
+          if(this.user.hatali_giris==3)
+          {
+            alert("Bloke oldunuz")
+          }
                  
-         console.log(this.hatali_sayisi);
+         
          alert("hatalı giris");
          })
     

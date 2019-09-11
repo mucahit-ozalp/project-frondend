@@ -11,6 +11,7 @@ import { DepartmantService } from './departmant.service';
 import { UserService } from './user.service';
 import { UserFormComponent } from "./user-form/user-form.component";
 import { AuthGaurdService } from './service/auth-gaurd.service';
+import { DefectFormComponent } from './defect-form/defect-form.component';
 
 
 
@@ -19,7 +20,8 @@ import { AuthGaurdService } from './service/auth-gaurd.service';
     AppComponent,
     DepartmantFormComponent,
     DepartmantListComponent,
-    UserFormComponent
+    UserFormComponent,
+    DefectFormComponent
   ],
   imports: [
     BrowserModule,
