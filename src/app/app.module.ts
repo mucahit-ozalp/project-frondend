@@ -12,6 +12,8 @@ import { UserService } from './user.service';
 import { UserFormComponent } from "./user-form/user-form.component";
 import { AuthGaurdService } from './service/auth-gaurd.service';
 import { DefectFormComponent } from './defect-form/defect-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DefectService } from './service/defect.service';
 
 
 
@@ -27,9 +29,13 @@ import { DefectFormComponent } from './defect-form/defect-form.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [DepartmantService, UserService,AuthGaurdService, UserFormComponent],
+  providers: [DepartmantService, UserService,AuthGaurdService,
+     UserFormComponent,DefectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

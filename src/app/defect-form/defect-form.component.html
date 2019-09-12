@@ -1,36 +1,30 @@
 <p>defect oluşturma sayfası</p>
-<div class="dropdown">
-  <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-    <button class="dropdown-item"  type="button">Kenan</button>
-    <button class="dropdown-item" type="button">Siebel</button>
-    <button class="dropdown-item" type="button">Tibco</button>
-  </div>
+<div class="container">
+   <div class="row custom-wrapper">
+      <div class="col-md-12">
+         <!-- Form starts -->
+         <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+         <div class="group-gap">
+            <div class="d-block my-3">
+               <div class="mb-3">
+                  <select class="custom-select" (change)="changeCity($event)" formControlName="cityName">
+                     <option value="">Lokasyon seç</option>
+                     <option *ngFor="let city of City"  [ngValue]="city">{{city.component}},
+                      {{city.departmant}}</option>
+                     
+                      
+                  </select>
+                  <!-- error block -->
+                  <div class="invalid-feedback" *ngIf="isSubmitted && cityName.errors?.required">
+                     <sup>*</sup>Please enter your city name
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- Submit Button -->
+         <button type="submit" class="btn btn-danger btn-lg btn-block">Submit</button>
+         </form><!-- Form ends -->
+      </div>
+   </div>
 </div>
-
-<div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" type="button">Tester</button>
-          <button class="dropdown-item" type="button">Developer</button>
-          <button class="dropdown-item" type="button">Operation</button>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="form-group">
-          <label  for="componentt">departmant</label>
-        </div>
-        <select d_id="departmant" component="departmant" departmant='departmant'  [(ngModel)]="departmant" class="form-control" >
-          <option *ngFor="let dept of departmant" >
-            
-            {{dept.component}} 
-            {{dept.departmant}}
-            </option>
-          
-        </select>
-      </div>
       
